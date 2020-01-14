@@ -2,7 +2,7 @@ import cv2
 
 camera = cv2.VideoCapture(0)
 
-Path = "D:/Apps/Recognition_Face_OpenCV/Cascades/haarcascade_frontalface_default.xml"
+Path = "D:/Recognition_Face_OpenCV/Cascades/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(Path)
 
 count = 0
@@ -16,7 +16,7 @@ while(True):
     
     for(x,y,w,h) in face:
         cv2.rectangle(imagen, (x,y), (x+w, y+h), (255,0,0), 4)
-        pathImage ="D:/Apps/Recognition_Face_OpenCV/images/Miguel/Miguel_"+str(count)+".jpg"
+        pathImage ="D:/Recognition_Face_OpenCV/images/Miguel/Miguel_"+str(count)+".jpg"
         cv2.imwrite(pathImage, imageEqualize[y:y+h, x:x+w])
         cv2.imshow("Create Dataset", imagen)
         count += 1

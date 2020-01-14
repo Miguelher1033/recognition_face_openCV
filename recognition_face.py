@@ -1,11 +1,11 @@
 import cv2
 import pickle
 
-path = "D:/Apps/Recognition_Face_OpenCV/Cascades/haarcascade_frontalface_alt2.xml"
+path = "D:/Recognition_Face_OpenCV/Cascades/haarcascade_frontalface_alt2.xml"
 faceCascade = cv2.CascadeClassifier(path)
 
-eyeCascade = cv2.CascadeClassifier("D:/Apps/Recognition_Face_OpenCV/Cascades/haarcascade_eye.xml")
-smileCascade = cv2.CascadeClassifier("D:/Apps/Recognition_Face_OpenCV/Cascades/haarcascade_smile.xml")
+eyeCascade = cv2.CascadeClassifier("D:/Recognition_Face_OpenCV/Cascades/haarcascade_eye.xml")
+smileCascade = cv2.CascadeClassifier("D:/Recognition_Face_OpenCV/Cascades/haarcascade_smile.xml")
 
 recognition = cv2.face.LBPHFaceRecognizer_create()
 recognition.read("train.yml")

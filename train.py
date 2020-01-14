@@ -12,7 +12,7 @@ if path.exists(fileTrain):
     remove(fileTrain)
 
 
-path = "D:/Apps/Recognition_Face_OpenCV/Cascades/haarcascade_frontalface_alt2.xml"
+path = "D:/Recognition_Face_OpenCV/Cascades/haarcascade_frontalface_alt2.xml"
 faceCascade = cv2.CascadeClassifier(path)
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
